@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+    <script src="js/jquery.tabletoCSV.js"></script>
+    <script src="js/csv_loader.js"></script>
+    <style type="text/css">
+      .parentId{
+        cursor: pointer;
+      }
+      .body {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="s007">
+      <div class="inner-form">
+        <div class="advance-search">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="images/austin_health.png"/>
+            </div>
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-4">
+                  <input type="file" class="custom-file-file" id="filename">
+                </div>
+                <div class="col-md-3 parentColumn hidden">
+                  <label for="csvTitleForParent">Parent Column Title</label>
+                  <select class="form-control" id="csvTitleForParent"></select>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="float-right">
+                    <div class="form-group"><button id="findParent" class="btn btn-primary hidden">Find Parent</button></div>
+                  </div>
+
+                </div>
+                <div class="col-md-2">
+                  <div class="form-group"><button id="exportTable" class="btn btn-primary hidden">Export</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s007 csvData hidden">
+      <div class="inner-form">
+        <div class="advance-search">
+          <div class="float-right">
+            <div class="form-group"><button id="aggregateParent" class="btn btn-primary">Aggregate Parent</button></div>
+          </div>
+        </div>
+        <div class="advance-search" id="csvDataTable">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
